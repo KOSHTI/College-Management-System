@@ -1,0 +1,80 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Django
+*.log
+*.pot
+*.pyc
+*.mo
+*.sqlite3
+db.sqlite3
+*.pyo
+__pycache__/
+
+# Ignore the following files and folders in your settings
+local_settings.py
+.env
+
+# Environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# VSCode
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Pytest cache
+.pytest_cache/
+
+# Migrations
+*/migrations/*
+
+# Static files
+staticfiles/
+static/
+
+# Media files
+media/
+
+# IDEs and editors
+*.swp
+*~
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Node.js
+node_modules/
+
+# MacOS
+.DS_Store
+
+# Heroku
+.heroku/
+
+# JetBrains
+.idea/
