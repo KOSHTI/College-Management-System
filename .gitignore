@@ -78,3 +78,10 @@ node_modules/
 
 # JetBrains
 .idea/
+
+# Added by request
+README.md
+
+# Optional (consider adding other documentation files)
+*.rst
+*.md
