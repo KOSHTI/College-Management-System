@@ -11,7 +11,7 @@ class Student(models.Model):
     last_name = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
     date_of_birth = models.DateField()
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
     enrollment_date = models.DateField(auto_now_add=True)
 
     def __str__(self) -> str:
@@ -37,10 +37,10 @@ class Course(models.Model):
         return self.course_name
 
 class Batch(models.Model):
-    batch_name = models.CharField(max_length=50)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    batch_name = models.CharField(max_length=255)
     start_date = models.DateField()
-    end_date = models.DateField()
+    end_date = models.DateField(null=True, blank=True)  # Allow null values for end_date
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.batch_name

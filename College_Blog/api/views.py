@@ -105,7 +105,7 @@ def create_batch(course_id: int, batch_name: str, start_date: str, end_date: str
     return {"message": "Batch created", "batch_id": batch.id}
 
 # Function to add students to a batch
-def add_students_to_batch(batch_id: int, student_ids: List[int]):
+def add_students_to_batch(batch_id: int, student_ids: list[int]):
     """Add students to a batch."""
     batch = get_object_or_404(Batch, id=batch_id)
     students = Student.objects.filter(id__in=student_ids)

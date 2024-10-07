@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ batch.batch_name }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Blog/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">{{ batch.batch_name }}</h1>
+        <p class="mt-4">Course: {{ batch.course.course_name }}</p>
+        <a href="{% url 'list_batches' %}" class="btn btn-secondary">Back to Batch List</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -144,19 +144,3 @@ def create_attendance(request, student_id: int, course_id: int, status: str):
     course = get_object_or_404(Course, id=course_id)
     attendance = Attendance.objects.create(student=student, course=course, status=status)
     return {"message": "Attendance created", "attendance_id": attendance.id}
-
-# # Faculty APIs
-# @router.get("/faculties", response=List[dict])
-# def list_faculties(request):
-#     faculties = Faculty.objects.all().values()
-#     return list(faculties)
-
-# @router.get("/faculty/{faculty_id}")
-# def get_faculty(request, faculty_id: int):
-#     faculty = get_object_or_404(Faculty, id=faculty_id)
-#     return {"first_name": faculty.first_name, "last_name": faculty.last_name}
-
-# @router.post("/faculty")
-# def create_faculty(request, first_name: str, last_name: str, email: str, department: str):
-#     faculty = Faculty.objects.create(first_name=first_name, last_name=last_name, email=email, department=department)
-#     return {"message": "Faculty created", "faculty_id": faculty.id}
